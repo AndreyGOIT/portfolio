@@ -18,6 +18,7 @@ import { ReactComponent as MyJS } from "../../images/js-svgrepo-com.svg";
 import { ReactComponent as MyReact } from "../../images/react-svgrepo-com.svg";
 import { ReactComponent as MyVSCode } from "../../images/vs-code-svgrepo-com.svg";
 import { ReactComponent as MyGitHub } from "../../images/github-svgrepo-com.svg";
+import { ReactComponent as MyRestApi } from "../../images/rest-api-icon.svg";
 
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
@@ -50,11 +51,9 @@ export default function Carousel() {
   const cards = [
     {
       title: "Movies",
-      technologies: ["HTML5", "CSS3", "JavaScript", "React"],
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "React", "RestApi"],
+      text: "The project is a web application designed for searching and exploring information about movies. Users can search for movies by title, view detailed information about specific movies, including descriptions, ratings, cast, and critics' reviews. Additionally, users can bookmark movies and manage their favorites. The application provides a convenient and interactive interface for movie enthusiasts looking for new films or wanting to learn more about their favorite ones.",
       URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
-      image:
-        "https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
     },
     {
       title: "Filmoteka",
@@ -89,6 +88,7 @@ export default function Carousel() {
     JavaScript: MyJS,
     React: MyReact,
     GitHub: MyGitHub,
+    RestApi: MyRestApi,
   };
 
   return (
@@ -168,12 +168,26 @@ export default function Carousel() {
                     {card.text}
                   </Text>
                   <HStack>
-                    <Text>Technoilogies:</Text>
+                    <Text>Technologies:</Text>
                     {card.technologies.map((tech, idx) => (
-                      <Box key={idx} w="80px">
-                        <Icon as={TechnologiesIcons[tech]} w={20} h={20} />
+                      <Box
+                        key={idx}
+                        w={20}
+                        bg={
+                          TechnologiesIcons[tech] === "RestApi"
+                            ? "white"
+                            : "black"
+                        }
+                      >
+                        <Icon
+                          as={TechnologiesIcons[tech]}
+                          w={"60px"}
+                          h={"60px"}
+                        />
                         <Center>
-                          <Text as="b">{tech}</Text>
+                          <Text as="b" color={"white"}>
+                            {tech}
+                          </Text>
                         </Center>
                       </Box>
                     ))}

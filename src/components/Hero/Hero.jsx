@@ -130,7 +130,7 @@ export default function Hero() {
                   >
                     {stat.title}
                   </Text>
-                  <Text fontSize={"xl"} color={"gray.400"}>
+                  <Text fontSize={"xl"} color={"white"}>
                     {stat.content}
                   </Text>
                 </Box>
