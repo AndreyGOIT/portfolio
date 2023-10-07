@@ -11,7 +11,9 @@ import {
   Flex,
   HStack,
   Center,
+  Link,
 } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { ReactComponent as MyHTML } from "../../images/html-5-svgrepo-com.svg";
 import { ReactComponent as MyCSS3 } from "../../images/css-3-svgrepo-com.svg";
 import { ReactComponent as MyJS } from "../../images/js-svgrepo-com.svg";
@@ -52,29 +54,51 @@ export default function Carousel() {
   const cards = [
     {
       title: "Movies",
-      technologies: ["HTML5", "CSS3", "JavaScript", "React", "RestApi"],
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "RestApi",
+        "GitHub",
+      ],
       text: "The project is a web application designed for searching and exploring information about movies. Users can search for movies by title, view detailed information about specific movies, including descriptions, ratings, cast, and critics' reviews. Additionally, users can bookmark movies and manage their favorites. The application provides a convenient and interactive interface for movie enthusiasts looking for new films or wanting to learn more about their favorite ones.",
       URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
-      year: "2022",
+      year: "2023",
       link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
     },
     {
       title: "Filmoteka",
-      technologies: ["HTML5", "CSS3", "JavaScript", "React"],
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      technologies: [
+        "VSC",
+        "HTML5",
+        "CSS3",
+        "RespDesign",
+        "JavaScript",
+        "React",
+        "RestApi",
+        "GitHub",
+      ],
+      text: "Filmoteka is a robust movie database web application crafted using modern web technologies. This project showcases advanced skills in frontend development, creating a visually appealing and intuitive user interface for movie enthusiasts. Utilizing HTML5, CSS3, and JavaScript, the frontend of Filmoteka is designed to be responsive, ensuring seamless user experience across various devices and screen sizes. Filmoteka stands as a testament to technical proficiency, combining frontend technologies to deliver a visually appealing, responsive, and interactive movie database web application.",
       URL: "https://andreygoit.github.io/Filmoteka-GOIT/index.html",
+      year: "2022",
+      link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
     },
     {
       title: "WebStudio",
-      technologies: ["RespDesign", "HTML5", "CSS3", "VSC"],
+      technologies: ["RespDesign", "HTML5", "CSS3", "VSC", "GitHub"],
       text: "Explore my WebStudio project, a beautifully crafted website showcasing advanced HTML and CSS skills. With a focus on responsive design, this project demonstrates expertise in creating seamless user experiences across various devices. The website incorporates modern design principles, ensuring both aesthetic appeal and functionality. Dive into the project to witness a blend of creativity and technical proficiency, exemplifying my dedication to delivering visually captivating and user-friendly web solutions.",
       URL: "https://andreygoit.github.io/goit-markup-hw-08/",
+      year: "2022",
+      link: "https://github.com/AndreyGOIT/goit-markup-hw-08",
     },
     {
       title: "Phonebook",
       technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
-      text: "App you can save contacts of your friends",
+      text: "Phonebook is a web application designed for convenient storage and management of contacts. The application allows users to add new contacts with specified names and phone numbers. Contacts can be edited or deleted, and users can perform quick searches for existing contacts. Phonebook provides a simple and effective way to organize personal contact information.",
       URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
+      year: "2022",
+      link: "https://github.com/AndreyGOIT/goit-react-hw-08-phonebook",
     },
   ];
 
@@ -149,7 +173,7 @@ export default function Carousel() {
                 ></iframe>
               </Box>
               <Box w={"50%"} h={"600px"} bg={"black"} p={4}>
-                <Stack spacing={6} w={"full"} maxW={"lg"}>
+                <Stack spacing={6} w={"full"} maxW={"100%"}>
                   <Center>
                     <Box
                       as="h3"
@@ -193,13 +217,29 @@ export default function Carousel() {
                       </Box>
                     ))}
                   </HStack>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color="white">
-                    <b>About:</b> {card.text}
-                  </Text>
+                  <Box w={"100%"}>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">
+                      <b>About:</b> {card.text}
+                    </Text>
+                  </Box>
                   <Text fontSize={{ base: "md", lg: "lg" }} color="white">
                     <b>Year: </b>
                     {card.year}
                   </Text>
+                  <Flex gap={1} align={"baseline"}>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">
+                      <b>Links: </b>
+                    </Text>
+                    <Link href={card.URL} isExternal color="white">
+                      live <ExternalLinkIcon mx="2px" />
+                    </Link>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">
+                      |
+                    </Text>
+                    <Link href={card.link} isExternal color="white">
+                      github <ExternalLinkIcon mx="2px" />
+                    </Link>
+                  </Flex>
                 </Stack>
               </Box>
             </Flex>
