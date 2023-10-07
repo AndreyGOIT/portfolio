@@ -19,6 +19,7 @@ import { ReactComponent as MyReact } from "../../images/react-svgrepo-com.svg";
 import { ReactComponent as MyVSCode } from "../../images/vs-code-svgrepo-com.svg";
 import { ReactComponent as MyGitHub } from "../../images/github-svgrepo-com.svg";
 import { ReactComponent as MyRestApi } from "../../images/rest-api-icon.svg";
+import { ReactComponent as MyRespDesign } from "../../images/responsive-design-svgrepo-com.svg";
 
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
@@ -54,30 +55,26 @@ export default function Carousel() {
       technologies: ["HTML5", "CSS3", "JavaScript", "React", "RestApi"],
       text: "The project is a web application designed for searching and exploring information about movies. Users can search for movies by title, view detailed information about specific movies, including descriptions, ratings, cast, and critics' reviews. Additionally, users can bookmark movies and manage their favorites. The application provides a convenient and interactive interface for movie enthusiasts looking for new films or wanting to learn more about their favorite ones.",
       URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
+      year: "2022",
+      link: "https://andreygoit.github.io/goit-react-hw-05-movies/",
     },
     {
       title: "Filmoteka",
       technologies: ["HTML5", "CSS3", "JavaScript", "React"],
       text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
       URL: "https://andreygoit.github.io/Filmoteka-GOIT/index.html",
-      image:
-        "https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80",
     },
     {
       title: "WebStudio",
-      technologies: ["HTML5", "CSS3", "JavaScript", "React"],
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      technologies: ["RespDesign", "HTML5", "CSS3", "VSC"],
+      text: "Explore my WebStudio project, a beautifully crafted website showcasing advanced HTML and CSS skills. With a focus on responsive design, this project demonstrates expertise in creating seamless user experiences across various devices. The website incorporates modern design principles, ensuring both aesthetic appeal and functionality. Dive into the project to witness a blend of creativity and technical proficiency, exemplifying my dedication to delivering visually captivating and user-friendly web solutions.",
       URL: "https://andreygoit.github.io/goit-markup-hw-08/",
-      image:
-        "https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
     },
     {
       title: "Phonebook",
       technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
       text: "App you can save contacts of your friends",
       URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
-      image:
-        "https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
     },
   ];
 
@@ -89,6 +86,7 @@ export default function Carousel() {
     React: MyReact,
     GitHub: MyGitHub,
     RestApi: MyRestApi,
+    RespDesign: MyRespDesign,
   };
 
   return (
@@ -154,6 +152,7 @@ export default function Carousel() {
                 <Stack spacing={6} w={"full"} maxW={"lg"}>
                   <Center>
                     <Box
+                      as="h3"
                       w="fit-content"
                       bg="white"
                       color="black"
@@ -164,11 +163,10 @@ export default function Carousel() {
                       {card.title}
                     </Box>
                   </Center>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
-                    {card.text}
-                  </Text>
                   <HStack>
-                    <Text>Technologies:</Text>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">
+                      <b>Technologies:</b>
+                    </Text>
                     {card.technologies.map((tech, idx) => (
                       <Box
                         key={idx}
@@ -192,6 +190,9 @@ export default function Carousel() {
                       </Box>
                     ))}
                   </HStack>
+                  <Text fontSize={{ base: "md", lg: "lg" }} color="white">
+                    <b>About:</b> {card.text}
+                  </Text>
                 </Stack>
               </Box>
             </Flex>
