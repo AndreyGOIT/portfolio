@@ -9,7 +9,6 @@ import {
   Heading,
   SimpleGrid,
   Image,
-  Center,
 } from "@chakra-ui/react";
 import WhatIBring from "../WhatIBring";
 
@@ -77,31 +76,40 @@ const stats = [
 
 export default function Hero() {
   return (
-    <Box as="main" bg={"blue.700"} py={[10, 20, 40]} position={"relative"}>
+    <Box as="main" bg={"blue.700"} py={[10, 20, 35]} position={"relative"}>
       <Container maxW={"7xl"} zIndex={10} position={"relative"}>
         <Flex direction={"column"}>
           <Stack flex={1} color={"gray.400"} justify={{ lg: "center" }}>
             <Flex gap={5}>
               <Box>
                 <Image
-                  src="/images/IMG_7344.jpeg"
+                  src="/images/portfolio_photo_AE.jpeg"
                   alt="photo Erokhin"
-                  maxW="60%" // Устанавливаем максимальную ширину изображения
+                  maxW="100%" // Устанавливаем максимальную ширину изображения
                   mx="auto" // Центрируем изображение
                 />
               </Box>
               <Box mb={{ base: 8, md: 20 }}>
-                <Center>
+                <Flex gap={1} align={"baseline"}>
                   <Heading
+                    as={"h1"}
                     color={"white"}
                     mb={5}
-                    fontSize={{ base: "3xl", md: "5xl" }}
+                    fontSize={{ base: "2xl", md: "4xl" }}
+                    style={{ whiteSpace: "nowrap" }}
                   >
-                    About me
+                    Full Stack Developer |
                   </Heading>
-                </Center>
+                  <Heading
+                    as="h1"
+                    color={"white"}
+                    fontSize={{ base: "xl", md: "3xl" }} // Уменьшил размер шрифта для второй части заголовка на больших экранах
+                  >
+                    Porvoo, Finland
+                  </Heading>
+                </Flex>
 
-                <Text fontSize={["xl", "xl", "2xl"]} color={"gray.400"}>
+                <Text fontSize={["xl", "xl", "2xl"]} color={"white"}>
                   Hello there! I am a passionate software developer with a
                   diverse background that shapes my unique approach to
                   problem-solving. Originally trained as a chemical engineer, I

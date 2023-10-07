@@ -7,7 +7,6 @@ import {
   IconButton,
   useColorMode,
   Icon,
-  HStack,
 } from "@chakra-ui/react";
 import { ReactComponent as MyMail } from "../../images/mail-alt-3-svgrepo-com.svg";
 import { ReactComponent as MyGit } from "../../images/github-142-svgrepo-com.svg";
@@ -23,7 +22,7 @@ const Header = () => {
         <Flex align="center">
           <Heading color="black">Andrey (Andy) Erokhin</Heading>
           <Spacer />
-          <HStack>
+          <Flex mr={3} gap={3}>
             <Box as="a" href="mailto: and.ero@icloud.com">
               <Icon as={MyMail} w={7} h={7} />
             </Box>
@@ -33,7 +32,7 @@ const Header = () => {
             <Box as="a" href="https://www.linkedin.com/in/andrey-erokhin">
               <Icon as={MyLinkedIn} w={7} h={7} />
             </Box>
-          </HStack>
+          </Flex>
           <AvatarWithRipple />
         </Flex>
       </Container>
