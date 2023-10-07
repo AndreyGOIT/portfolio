@@ -56,7 +56,7 @@ export default function Carousel() {
       text: "The project is a web application designed for searching and exploring information about movies. Users can search for movies by title, view detailed information about specific movies, including descriptions, ratings, cast, and critics' reviews. Additionally, users can bookmark movies and manage their favorites. The application provides a convenient and interactive interface for movie enthusiasts looking for new films or wanting to learn more about their favorite ones.",
       URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
       year: "2022",
-      link: "https://andreygoit.github.io/goit-react-hw-05-movies/",
+      link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
     },
     {
       title: "Filmoteka",
@@ -165,12 +165,15 @@ export default function Carousel() {
                   </Center>
                   <HStack>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">
-                      <b>Technologies:</b>
+                      <b>Technologies: </b>
                     </Text>
                     {card.technologies.map((tech, idx) => (
                       <Box
                         key={idx}
                         w={20}
+                        display="flex"
+                        flexDirection={"column"}
+                        alignItems="center" // Выравнивание по центру по вертикали
                         bg={
                           TechnologiesIcons[tech] === "RestApi"
                             ? "white"
@@ -179,8 +182,8 @@ export default function Carousel() {
                       >
                         <Icon
                           as={TechnologiesIcons[tech]}
-                          w={"60px"}
-                          h={"60px"}
+                          w={"50px"}
+                          h={"50px"}
                         />
                         <Center>
                           <Text as="b" color={"white"}>
@@ -192,6 +195,10 @@ export default function Carousel() {
                   </HStack>
                   <Text fontSize={{ base: "md", lg: "lg" }} color="white">
                     <b>About:</b> {card.text}
+                  </Text>
+                  <Text fontSize={{ base: "md", lg: "lg" }} color="white">
+                    <b>Year: </b>
+                    {card.year}
                   </Text>
                 </Stack>
               </Box>
