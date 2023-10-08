@@ -14,7 +14,7 @@ import { ReactComponent as MyVSCode } from "../../images/vs-code-svgrepo-com.svg
 import { ReactComponent as MyCSS3 } from "../../images/css-3-svgrepo-com.svg";
 import { ReactComponent as MyJS } from "../../images/js-svgrepo-com.svg";
 import { ReactComponent as MyReact } from "../../images/react-svgrepo-com.svg";
-import { ReactComponent as MyNode } from "../../images/node-js-svgrepo-com.svg";
+import { ReactComponent as MyNode } from "../../images/nodejs-1-logo-svgrepo-com.svg";
 import { ReactComponent as MyGitHub } from "../../images/github-svgrepo-com.svg";
 import { ReactComponent as MyRedux } from "../../images/redux-svgrepo-com.svg";
 import { ReactComponent as MyMongoDB } from "../../images/mongodb-svgrepo-com.svg";

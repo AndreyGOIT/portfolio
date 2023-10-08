@@ -2,38 +2,41 @@
 
 import {
   Box,
-  chakra,
   Container,
   Stack,
   Text,
   useColorModeValue,
-  VisuallyHidden,
+  Flex,
+  Icon,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
-const SocialButton = ({ children, label, href }) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  );
-};
+import { ReactComponent as MyMail } from "../../images/mail-alt-3-svgrepo-com.svg";
+import { ReactComponent as MyGit } from "../../images/github-142-svgrepo-com.svg";
+import { ReactComponent as MyLinkedIn } from "../../images/linkedin-svgrepo-com.svg";
+
+// const SocialButton = ({ children, label, href }) => {
+//   return (
+//     <chakra.button
+//       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+//       rounded={"full"}
+//       w={8}
+//       h={8}
+//       cursor={"pointer"}
+//       as={"a"}
+//       href={href}
+//       display={"inline-flex"}
+//       alignItems={"center"}
+//       justifyContent={"center"}
+//       transition={"background 0.3s ease"}
+//       _hover={{
+//         bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+//       }}
+//     >
+//       <VisuallyHidden>{label}</VisuallyHidden>
+//       {children}
+//     </chakra.button>
+//   );
+// };
 
 export default function Footer() {
   return (
@@ -51,17 +54,17 @@ export default function Footer() {
         align={{ base: "center", md: "center" }}
       >
         <Text>Created by Andy Erokhin. All rights reserved © 2023</Text>
-        <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Twitter"} href={"#"}>
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton label={"YouTube"} href={"#"}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={"Instagram"} href={"#"}>
-            <FaInstagram />
-          </SocialButton>
-        </Stack>
+        <Flex mr={3} gap={3}>
+          <Box as="a" href="mailto: and.ero@icloud.com">
+            <Icon as={MyMail} w={7} h={7} />
+          </Box>
+          <Box as="a" href="https://github.com/AndreyGOIT">
+            <Icon as={MyGit} w={7} h={7} />
+          </Box>
+          <Box as="a" href="https://www.linkedin.com/in/andrey-erokhin">
+            <Icon as={MyLinkedIn} w={7} h={7} />
+          </Box>
+        </Flex>
       </Container>
     </Box>
   );
