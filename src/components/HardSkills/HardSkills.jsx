@@ -25,7 +25,13 @@ const HardSkills = () => {
     <Box position={"relative"}>
       <Container as="section" maxW={"7xl"} p="40px">
         <Center>
-          <Flex flexDirection={"column"} gap={4}>
+          <Flex
+            flexDirection={"column"}
+            gap={4}
+            flexWrap="wrap"
+            justify="center"
+            textAlign="center"
+          >
             <Heading
               textAlign="center"
               my="30px"
@@ -37,71 +43,76 @@ const HardSkills = () => {
             >
               Hard Skills
             </Heading>
-            <Flex gap={6}>
-              <Box w="80px">
+            <Flex
+              gap={6}
+              flexWrap="wrap" // Этот атрибут позволяет иконкам переноситься на новую строку при нехватке места в текущей строке
+              justify="center"
+              textAlign="center"
+            >
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyVSCode} w={20} h={20} />
                 <Center>
                   <Text as="b">VS Code</Text>
                 </Center>
               </Box>
 
-              <Box w="80px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyHTML} w={20} h={20} />
                 <Center>
                   <Text as="b">HTML5</Text>
                 </Center>
               </Box>
 
-              <Box w="80px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyCSS3} w={20} h={20} />
                 <Center>
                   <Text as="b">CSS3</Text>
                 </Center>
               </Box>
 
-              <Box w="90px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyJS} w={20} h={20} />
                 <Center>
                   <Text as="b">Java Script</Text>
                 </Center>
               </Box>
 
-              <Box w="80px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyReact} w={20} h={20} />
                 <Center>
                   <Text as="b">React</Text>
                 </Center>
               </Box>
 
-              <Box w="80px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyNode} w={20} h={20} />
                 <Center>
                   <Text as="b">Node JS</Text>
                 </Center>
               </Box>
 
-              <Box w="80px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyRedux} w={20} h={20} />
                 <Center>
                   <Text as="b">Redux</Text>
                 </Center>
               </Box>
 
-              <Box w="80px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyMongoDB} w={20} h={20} />
                 <Center>
                   <Text as="b">MongoDB</Text>
                 </Center>
               </Box>
 
-              <Box w="80px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyGitHub} w={20} h={20} />
                 <Center>
                   <Text as="b">GitHub</Text>
                 </Center>
               </Box>
 
-              <Box w="80px">
+              <Box w={{ base: "80px", md: "90px" }}>
                 <Icon as={MyChatGPT} w={20} h={20} />
                 <Center>
                   <Text as="b">ChatGPT</Text>
