@@ -40,6 +40,7 @@ const HardSkills = () => {
               color={"white"}
               bg={"gray.600"}
               w={250}
+              borderRadius={6}
             >
               Hard Skills
             </Heading>

@@ -32,6 +32,7 @@ const SoftSkills = () => {
               color={"white"}
               bg={"gray.600"}
               w={250}
+              borderRadius={6}
             >
               Soft Skills
             </Heading>
