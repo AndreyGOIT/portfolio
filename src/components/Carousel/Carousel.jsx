@@ -120,7 +120,7 @@ export default function Carousel() {
       width={"full"}
       overflow={"hidden"}
       px={"80px"}
-      bg={"blue.700"}
+      bg={"gray.500"}
     >
       {/* CSS files for react-slick */}
       <link
@@ -164,7 +164,7 @@ export default function Carousel() {
         {cards.map((card, index) => (
           <Box key={index} height={"6xl"} position="relative">
             <Flex>
-              <Box w={"50%"} h={"600px"} bg={"black"} p={4}>
+              <Box w={"50%"} h={"600px"} bg={"gray.700"} p={4}>
                 <iframe
                   width="100%"
                   height="100%"
@@ -172,7 +172,7 @@ export default function Carousel() {
                   title={card.title}
                 ></iframe>
               </Box>
-              <Box w={"50%"} h={"600px"} bg={"black"} p={4}>
+              <Box w={"50%"} h={"600px"} bg={"gray.700"} p={4}>
                 <Stack spacing={6} w={"full"} maxW={"100%"}>
                   <Center>
                     <Box

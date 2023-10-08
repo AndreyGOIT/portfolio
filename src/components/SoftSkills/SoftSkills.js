@@ -24,7 +24,7 @@ const SoftSkills = () => {
               mx={"auto"}
               p="20px 30px"
               color={"white"}
-              bg={"blue.700"}
+              bg={"gray.500"}
               w={250}
             >
               Soft Skills

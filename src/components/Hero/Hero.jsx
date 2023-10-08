@@ -76,7 +76,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <Box as="main" bg={"blue.700"} py={[10, 20, 35]} position={"relative"}>
+    <Box as="main" bg={"gray.500"} py={[10, 20, 35]} position={"relative"}>
       <Container maxW={"7xl"} zIndex={10} position={"relative"}>
         <Flex direction={"column"}>
           <Stack flex={1} color={"gray.400"} justify={{ lg: "center" }}>
