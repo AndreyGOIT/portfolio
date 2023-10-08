@@ -38,7 +38,7 @@ const HardSkills = () => {
               mx={"auto"}
               p="20px 30px"
               color={"white"}
-              bg={"gray.500"}
+              bg={"gray.600"}
               w={250}
             >
               Hard Skills

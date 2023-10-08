@@ -9,12 +9,18 @@ import {
   ListIcon,
   ListItem,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
 
 const SoftSkills = () => {
+  const { colorMode } = useColorMode(); // Получаем текущий режим цветов
+
   return (
-    <Box bg={"gray.200"} position={"relative"}>
+    <Box
+      bg={colorMode === "light" ? "gray.200" : "gray.800"}
+      position={"relative"}
+    >
       <Container as="section" maxW={"7xl"} p="40px">
         <Center>
           <Flex flexDirection={"column"} gap={4}>
@@ -24,7 +30,7 @@ const SoftSkills = () => {
               mx={"auto"}
               p="20px 30px"
               color={"white"}
-              bg={"gray.500"}
+              bg={"gray.600"}
               w={250}
             >
               Soft Skills

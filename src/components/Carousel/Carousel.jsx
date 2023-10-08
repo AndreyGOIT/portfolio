@@ -9,7 +9,7 @@ import {
   Text,
   Icon,
   Flex,
-  HStack,
+  // HStack,
   Center,
   Link,
 } from "@chakra-ui/react";
@@ -120,7 +120,7 @@ export default function Carousel() {
       width={"full"}
       overflow={"hidden"}
       px={"80px"}
-      bg={"gray.500"}
+      bg={"gray.600"}
     >
       {/* CSS files for react-slick */}
       <link
@@ -187,36 +187,43 @@ export default function Carousel() {
                       {card.title}
                     </Box>
                   </Center>
-                  <HStack>
+                  <Flex wrap="wrap" alignItems="center" gap={3}>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">
                       <b>Technologies: </b>
                     </Text>
                     {card.technologies.map((tech, idx) => (
                       <Box
                         key={idx}
-                        w={20}
+                        w={{ base: "50px", lg: "70px" }} // Адаптивная ширина для контейнера
+                        // h={{ base: "50px", lg: "70px" }} // Адаптивная высота
                         display="flex"
-                        flexDirection={"column"}
-                        alignItems="center" // Выравнивание по центру по вертикали
+                        flexDirection="column"
+                        alignItems="center"
                         bg={
                           TechnologiesIcons[tech] === "RestApi"
                             ? "white"
-                            : "black"
+                            : "gray.700"
                         }
+                        borderRadius="md" // Округление углов для красивого вида
+                        p="2" // Отступы внутри блока
                       >
                         <Icon
                           as={TechnologiesIcons[tech]}
-                          w={"50px"}
-                          h={"50px"}
+                          w={{ base: "30px", lg: "40px" }} // Адаптивная ширина для иконки
+                          h={{ base: "30px", lg: "40px" }} // Адаптивная высота для иконки
                         />
-                        <Center>
-                          <Text as="b" color={"white"}>
+                        <Center mt="2">
+                          <Text
+                            as="b"
+                            color={"white"}
+                            fontSize={{ base: "xs", lg: "sm" }} // Адаптивный размер текста
+                          >
                             {tech}
                           </Text>
                         </Center>
                       </Box>
                     ))}
-                  </HStack>
+                  </Flex>
                   <Box w={"100%"}>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">
                       <b>About:</b> {card.text}
