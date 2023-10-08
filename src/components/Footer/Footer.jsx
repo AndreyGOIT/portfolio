@@ -5,44 +5,26 @@ import {
   Container,
   Stack,
   Text,
-  useColorModeValue,
   Flex,
-  Icon,
+  useColorMode,
 } from "@chakra-ui/react";
 
 import { ReactComponent as MyMail } from "../../images/mail-alt-3-svgrepo-com.svg";
 import { ReactComponent as MyGit } from "../../images/github-142-svgrepo-com.svg";
 import { ReactComponent as MyLinkedIn } from "../../images/linkedin-svgrepo-com.svg";
 
-// const SocialButton = ({ children, label, href }) => {
-//   return (
-//     <chakra.button
-//       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-//       rounded={"full"}
-//       w={8}
-//       h={8}
-//       cursor={"pointer"}
-//       as={"a"}
-//       href={href}
-//       display={"inline-flex"}
-//       alignItems={"center"}
-//       justifyContent={"center"}
-//       transition={"background 0.3s ease"}
-//       _hover={{
-//         bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-//       }}
-//     >
-//       <VisuallyHidden>{label}</VisuallyHidden>
-//       {children}
-//     </chakra.button>
-//   );
-// };
-
 export default function Footer() {
+  const { colorMode } = useColorMode();
+
+  const iconColor = {
+    light: "gray.700",
+    dark: "white",
+  };
+
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
+      bg={colorMode === "light" ? "gray.50" : "gray.900"}
+      color={colorMode === "light" ? "gray.700" : "gray.200"}
     >
       <Container
         as={Stack}
@@ -56,13 +38,13 @@ export default function Footer() {
         <Text>Created by Andy Erokhin. All rights reserved © 2023</Text>
         <Flex mr={3} gap={3}>
           <Box as="a" href="mailto: and.ero@icloud.com">
-            <Icon as={MyMail} w={7} h={7} />
+            <MyMail width={30} height={30} fill={iconColor[colorMode]} />
           </Box>
           <Box as="a" href="https://github.com/AndreyGOIT">
-            <Icon as={MyGit} w={7} h={7} />
+            <MyGit width={30} height={30} fill={iconColor[colorMode]} />
           </Box>
           <Box as="a" href="https://www.linkedin.com/in/andrey-erokhin">
-            <Icon as={MyLinkedIn} w={7} h={7} />
+            <MyLinkedIn width={30} height={30} fill={iconColor[colorMode]} />
           </Box>
         </Flex>
       </Container>

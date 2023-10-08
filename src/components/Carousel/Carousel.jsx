@@ -144,7 +144,7 @@ export default function Carousel() {
         zIndex={2}
         onClick={() => sliderRef.current.slickPrev()}
       >
-        <BiLeftArrowAlt size="40px" />
+        <BiLeftArrowAlt color={"white"} size="40px" />
       </IconButton>
       {/* Right Icon */}
       <IconButton
@@ -157,7 +157,7 @@ export default function Carousel() {
         zIndex={2}
         onClick={() => sliderRef.current.slickNext()}
       >
-        <BiRightArrowAlt size="40px" />
+        <BiRightArrowAlt color={"white"} size="40px" />
       </IconButton>
       {/* Slider */}
       <Slider {...settings} ref={sliderRef}>
