@@ -79,7 +79,7 @@ export default function Carousel() {
         "RestApi",
         "GitHub",
       ],
-      text: "Filmoteka is a robust movie database web application crafted using modern web technologies. This project showcases advanced skills in frontend development, creating a visually appealing and intuitive user interface for movie enthusiasts. Utilizing HTML5, CSS3, and JavaScript, the frontend of Filmoteka is designed to be responsive, ensuring seamless user experience across various devices and screen sizes. Filmoteka stands as a testament to technical proficiency, combining frontend technologies to deliver a visually appealing, responsive, and interactive movie database web application.",
+      text: "Filmoteka is a sophisticated movie database web application, demonstrating advanced frontend development skills. Crafted with HTML5, CSS3, and JavaScript, it offers an intuitive user interface for movie enthusiasts. The responsive design ensures seamless user experience across devices, showcasing technical proficiency and interactivity.",
       URL: "https://andreygoit.github.io/Filmoteka-GOIT/index.html",
       year: "2022",
       link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
@@ -173,7 +173,7 @@ export default function Carousel() {
                 ></iframe>
               </Box>
               <Box w={"50%"} h={"600px"} bg={"gray.700"} p={4}>
-                <Stack spacing={6} w={"full"} maxW={"100%"}>
+                <Stack spacing={4} w={"full"} maxW={"100%"}>
                   <Center>
                     <Box
                       as="h3"
@@ -182,12 +182,13 @@ export default function Carousel() {
                       color="black"
                       fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
                       p={"8px 25px"}
-                      mb={4}
+                      mb={1}
+                      borderRadius={6}
                     >
                       {card.title}
                     </Box>
                   </Center>
-                  <Flex wrap="wrap" alignItems="center" gap={3}>
+                  <Flex wrap="wrap" alignItems="center" gap={1}>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">
                       <b>Technologies: </b>
                     </Text>
