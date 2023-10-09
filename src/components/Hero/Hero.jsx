@@ -12,7 +12,7 @@ import {
 import WhatIBring from "../WhatIBring";
 
 const StatsText = ({ children }) => (
-  <Text as={"span"} fontWeight={700} color={"white"}>
+  <Text as={"p"} fontWeight={700} color={"white"}>
     {children}
   </Text>
 );
@@ -135,6 +135,7 @@ export default function Hero() {
           {stats.map((stat) => (
             <Box key={stat.title}>
               <Text
+                as={"h2"}
                 fontFamily={"heading"}
                 fontSize={"3xl"}
                 color={"white"}
@@ -142,7 +143,7 @@ export default function Hero() {
               >
                 {stat.title}
               </Text>
-              <Text fontSize={"xl"} color={"white"}>
+              <Text as={"h3"} fontSize={"xl"} color={"white"}>
                 {stat.content}
               </Text>
             </Box>

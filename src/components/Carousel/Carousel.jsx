@@ -9,7 +9,6 @@ import {
   Text,
   Icon,
   Flex,
-  // HStack,
   Center,
   Link,
 } from "@chakra-ui/react";
@@ -64,7 +63,7 @@ export default function Carousel() {
       ],
       text: "The project is a web application designed for searching and exploring information about movies. Users can search for movies by title, view detailed information about specific movies, including descriptions, ratings, cast, and critics' reviews. Additionally, users can bookmark movies and manage their favorites. The application provides a convenient and interactive interface for movie enthusiasts looking for new films or wanting to learn more about their favorite ones.",
       URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
-      year: "2023",
+      year: "2022",
       link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
     },
     {
@@ -81,14 +80,14 @@ export default function Carousel() {
       ],
       text: "Filmoteka is a sophisticated movie database web application, demonstrating advanced frontend development skills. Crafted with HTML5, CSS3, and JavaScript, it offers an intuitive user interface for movie enthusiasts. The responsive design ensures seamless user experience across devices, showcasing technical proficiency and interactivity.",
       URL: "https://andreygoit.github.io/Filmoteka-GOIT/index.html",
-      year: "2022",
+      year: "2023",
       link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
     },
     {
       title: "WebStudio",
       technologies: ["RespDesign", "HTML5", "CSS3", "VSC", "GitHub"],
       text: "Explore my WebStudio project, a beautifully crafted website showcasing advanced HTML and CSS skills. With a focus on responsive design, this project demonstrates expertise in creating seamless user experiences across various devices. The website incorporates modern design principles, ensuring both aesthetic appeal and functionality. Dive into the project to witness a blend of creativity and technical proficiency, exemplifying my dedication to delivering visually captivating and user-friendly web solutions.",
-      URL: "https://andreygoit.github.io/goit-markup-hw-08/",
+      URL: "https://andreygoit.github.io/goit-markup-hw-08",
       year: "2022",
       link: "https://github.com/AndreyGOIT/goit-markup-hw-08",
     },
@@ -97,7 +96,7 @@ export default function Carousel() {
       technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
       text: "Phonebook is a web application designed for convenient storage and management of contacts. The application allows users to add new contacts with specified names and phone numbers. Contacts can be edited or deleted, and users can perform quick searches for existing contacts. Phonebook provides a simple and effective way to organize personal contact information.",
       URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
-      year: "2022",
+      year: "2023",
       link: "https://github.com/AndreyGOIT/goit-react-hw-08-phonebook",
     },
   ];
@@ -196,7 +195,6 @@ export default function Carousel() {
                       <Box
                         key={idx}
                         w={{ base: "50px", lg: "70px" }} // Адаптивная ширина для контейнера
-                        // h={{ base: "50px", lg: "70px" }} // Адаптивная высота
                         display="flex"
                         flexDirection="column"
                         alignItems="center"
@@ -235,17 +233,31 @@ export default function Carousel() {
                     {card.year}
                   </Text>
                   <Flex gap={1} align={"baseline"}>
-                    <Text fontSize={{ base: "md", lg: "lg" }} color="white">
-                      <b>Links: </b>
+                    <Text
+                      fontSize={{ base: "md", lg: "lg" }}
+                      fontWeight={"700"}
+                      color="white"
+                    >
+                      Links:
                     </Text>
-                    <Link href={card.URL} isExternal color="white">
-                      live <ExternalLinkIcon mx="2px" />
+                    <Link
+                      href={card.URL}
+                      isExternal
+                      color="white"
+                      // onClick={() => console.log(card.URL)}
+                    >
+                      Live page <ExternalLinkIcon mx="2px" />
                     </Link>
                     <Text fontSize={{ base: "md", lg: "lg" }} color="white">
                       |
                     </Text>
-                    <Link href={card.link} isExternal color="white">
-                      github <ExternalLinkIcon mx="2px" />
+                    <Link
+                      href={card.link}
+                      isExternal
+                      color="white"
+                      // onClick={() => console.log(card.link)}
+                    >
+                      GitHub <ExternalLinkIcon mx="2px" />
                     </Link>
                   </Flex>
                 </Stack>
