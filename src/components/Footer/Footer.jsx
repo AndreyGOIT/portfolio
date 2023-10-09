@@ -25,7 +25,7 @@ export default function Footer() {
 
   return (
     <Box
-      bg={colorMode === "light" ? "gray.50" : "gray.900"}
+      bg={colorMode === "light" ? "gray.200" : "gray.900"}
       color={colorMode === "light" ? "gray.700" : "gray.200"}
     >
       <Container

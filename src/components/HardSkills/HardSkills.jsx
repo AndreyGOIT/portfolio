@@ -9,6 +9,7 @@ import {
   Text,
   Center,
 } from "@chakra-ui/react";
+
 import { ReactComponent as MyHTML } from "../../images/html-5-svgrepo-com.svg";
 import { ReactComponent as MyVSCode } from "../../images/vs-code-svgrepo-com.svg";
 import { ReactComponent as MyCSS3 } from "../../images/css-3-svgrepo-com.svg";
