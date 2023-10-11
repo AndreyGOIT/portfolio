@@ -1,0 +1,40 @@
+.slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  /* background: #3d3b3b; */
+}
+
+.slide {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 20px 20px;
+  gap: 20px;
+}
+
+.slide.active {
+  display: flex;
+
+  opacity: 1;
+}
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+.slideFrame {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.techBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slideLinks {
+  display: flex;
+  gap: 5px;
+}
