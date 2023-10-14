@@ -101,7 +101,11 @@ export const SliderCss = ({ items }) => {
     <Box
       as={"div"}
       position={"relative"}
-      height={"600px"}
+      height={{
+        base: "800px",
+        mobMax: "750px",
+        tab: "600px",
+      }}
       width={"100%"}
       overflow={"hidden"}
       px={1}
@@ -171,7 +175,7 @@ export const SliderCss = ({ items }) => {
                 desk: "500px",
               }}
               py={"45px"}
-              mb={"15px"}
+              mb={{ base: "5px", tab: "15px" }}
             >
               <Text
                 as={"h3"}
@@ -208,7 +212,7 @@ export const SliderCss = ({ items }) => {
                   <Center mt="2">
                     <Text
                       as="b"
-                      fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                      fontSize={{ base: "xs", tab: "sm", desk: "lg" }}
                       color={"white"}
                       className="techText"
                     >
@@ -223,7 +227,7 @@ export const SliderCss = ({ items }) => {
 
             <Text
               as="p"
-              fontSize={{ base: "sm", md: "md", lg: "lg" }}
+              fontSize={{ base: "12px", tab: "14px", desk: "16px" }}
               color="white"
             >
               <b>About: </b>

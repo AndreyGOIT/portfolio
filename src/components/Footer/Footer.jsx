@@ -13,7 +13,7 @@ import {
 
 import { ReactComponent as MyMail } from "../../images/mail-alt-3-svgrepo-com.svg";
 import { ReactComponent as MyGit } from "../../images/github-142-svgrepo-com.svg";
-import { ReactComponent as MyLinkedIn } from "../../images/linkedin-svgrepo-com.svg";
+import { ReactComponent as MyLinkedIn } from "../../images/linkedin-outline-svgrepo-com.svg";
 
 export default function Footer() {
   const { colorMode } = useColorMode();

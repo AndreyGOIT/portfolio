@@ -8,6 +8,7 @@ import {
   Heading,
   SimpleGrid,
   Image,
+  useColorMode,
 } from "@chakra-ui/react";
 import WhatIBring from "../WhatIBring";
 
@@ -74,8 +75,15 @@ const stats = [
 ];
 
 export default function Hero() {
+  const { colorMode } = useColorMode();
+
   return (
-    <Box as="main" bg={"gray.600"} py={[10, 20, 35]} position={"relative"}>
+    <Box
+      as="main"
+      bg={colorMode === "light" ? "gray.600" : "gray.700"}
+      py={[10, 20, 35]}
+      position={"relative"}
+    >
       <Container maxW={"7xl"} zIndex={10} position={"relative"}>
         <Flex
           direction={{ base: "column", md: "row" }}
