@@ -10,7 +10,10 @@ const RootLayout = () => {
       <Header />
       <Outlet />
       <Footer />
-      <ScrollToTop smooth component={<p style={{ color: "blue" }}>UP</p>} />
+      <ScrollToTop
+        smooth
+        component={<b style={{ color: "gray", fontSize: "35px" }}>^</b>}
+      />
     </div>
   );
 };

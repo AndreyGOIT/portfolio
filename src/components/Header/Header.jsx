@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import {
   Box,
   Container,
@@ -14,9 +15,15 @@ import { ReactComponent as MyGit } from "../../images/github-142-svgrepo-com.svg
 import { ReactComponent as MyLinkedIn } from "../../images/linkedin-outline-svgrepo-com.svg";
 // import AvatarWithRipple from "../AvatarWithRipple/AvatarWithRipple";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+// import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import { I18nContext } from "../../i18n"; // Путь к вашему i18n.js
 
 const Header = () => {
   const { toggleColorMode, colorMode } = useColorMode();
+  const { t } = useTranslation();
+  // eslint-disable-next-line
+  const { changeLanguage, language } = useContext(I18nContext);
 
   const iconColor = {
     light: "gray.700",
@@ -36,13 +43,13 @@ const Header = () => {
             // size={{ base: "44px", md: "40px", lg: "86px" }}
             color={colorMode === "light" ? "gray.700" : "gray.200"}
           >
-            Andrey (Andy) Erokhin
+            {t("fullName")}
           </Heading>
           <Spacer />
           <Box as="div" mr={2}>
-            <Text fontWeight={"bold"}>Hiring?</Text>
-            <Text fontWeight={"bold"}>Need a website?</Text>
-            <Text fontWeight={"bold"}>Want to collaborate?</Text>
+            <Text fontWeight={"bold"}>{t("hiring")}</Text>
+            <Text fontWeight={"bold"}>{t("need")}</Text>
+            <Text fontWeight={"bold"}>{t("want")}</Text>
           </Box>
           <Flex
             flexDir={{ base: "column", md: "row" }}
@@ -59,7 +66,11 @@ const Header = () => {
               <Icon as={MyLinkedIn} w={7} h={7} fill={iconColor[colorMode]} />
             </Box>
           </Flex>
-          {/* <AvatarWithRipple /> */}
+          {/* <LanguageSelector /> */}
+          <div>
+            <button onClick={() => changeLanguage("en")}>EN</button>/
+            <button onClick={() => changeLanguage("ru")}>RU</button>
+          </div>
         </Flex>
       </Container>
       <IconButton

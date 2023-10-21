@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import i18n from "./i18n";
+import { I18nContext } from "./i18n";
 
 // 1. Import the extendTheme function and import `ChakraProvider` component
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
@@ -31,7 +33,14 @@ root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <BrowserRouter basename="/">
-        <App />
+        <I18nContext.Provider
+          value={{
+            changeLanguage: i18n.changeLanguage,
+            language: i18n.language,
+          }}
+        >
+          <App />
+        </I18nContext.Provider>
       </BrowserRouter>
     </ChakraProvider>
   </React.StrictMode>

@@ -1,4 +1,4 @@
-import { items, SliderCss } from "./SliderCss.jsx";
+import { SliderCss } from "./SliderCss.jsx";
 
 // export default SliderCss;
-export { items, SliderCss };
+export { SliderCss };

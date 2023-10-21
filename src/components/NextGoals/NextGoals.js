@@ -17,7 +17,11 @@ import { ReactComponent as MyWordPress } from "../../images/wordpress-color-svgr
 import { ReactComponent as MyReactNative } from "../../images/react-native-1.svg";
 import { ReactComponent as MyMarkdown } from "../../images/markdown-svgrepo-com-2.svg";
 
+import { useTranslation } from "react-i18next";
+
 const NextGoals = () => {
+  const { t } = useTranslation();
+
   return (
     <Box position={"relative"}>
       <Container as="section" maxW={"7xl"} p="40px">
@@ -36,10 +40,11 @@ const NextGoals = () => {
               p="20px 30px"
               color={"white"}
               bg={"gray.600"}
-              w={250}
+              w={{ base: "300px", lg: "370px" }}
               borderRadius={6}
+              fontSize={{ base: "2xl", lg: "3xl" }}
             >
-              NextGoals
+              {t("NextGoals")}
             </Heading>
             <Flex
               gap={6}

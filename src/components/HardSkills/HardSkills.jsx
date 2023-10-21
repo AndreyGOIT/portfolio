@@ -21,7 +21,11 @@ import { ReactComponent as MyRedux } from "../../images/redux-svgrepo-com.svg";
 import { ReactComponent as MyMongoDB } from "../../images/mongodb-svgrepo-com.svg";
 import { ReactComponent as MyChatGPT } from "../../images/openai-svgrepo-com.svg";
 
+import { useTranslation } from "react-i18next";
+
 const HardSkills = () => {
+  const { t } = useTranslation();
+
   return (
     <Box position={"relative"}>
       <Container as="section" maxW={"7xl"} p="40px">
@@ -40,10 +44,11 @@ const HardSkills = () => {
               p="20px 30px"
               color={"white"}
               bg={"gray.600"}
-              w={250}
+              w={{ base: "300px", lg: "370px" }}
               borderRadius={6}
+              fontSize={{ base: "2xl", lg: "3xl" }}
             >
-              Hard Skills
+              {t("Hard Skills")}
             </Heading>
             <Flex
               gap={6}

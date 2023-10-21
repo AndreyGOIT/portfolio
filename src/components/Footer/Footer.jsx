@@ -15,8 +15,11 @@ import { ReactComponent as MyMail } from "../../images/mail-alt-3-svgrepo-com.sv
 import { ReactComponent as MyGit } from "../../images/github-142-svgrepo-com.svg";
 import { ReactComponent as MyLinkedIn } from "../../images/linkedin-outline-svgrepo-com.svg";
 
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
   const { colorMode } = useColorMode();
+  const { t } = useTranslation();
 
   const iconColor = {
     light: "gray.700",
@@ -46,14 +49,12 @@ export default function Footer() {
             gap={5}
           >
             <Box as="div">
-              <Text fontWeight={"bold"}>Hiring?</Text>
-              <Text fontWeight={"bold"}>Need a website?</Text>
-              <Text fontWeight={"bold"}>Want to collaborate?</Text>
+              <Text fontWeight={"bold"}>{t("hiring")}</Text>
+              <Text fontWeight={"bold"}>{t("need")}</Text>
+              <Text fontWeight={"bold"}>{t("want")}</Text>
             </Box>
             <Box as="div">
-              <Text fontWeight={"bold"}>
-                Reach out to me via e-mail, GitHub or LinkedIn:
-              </Text>
+              <Text fontWeight={"bold"}>{t("reachOut")}</Text>
             </Box>
             <Flex mr={3} gap={3}>
               <Box as="a" href="mailto: and.ero@icloud.com">
@@ -76,7 +77,7 @@ export default function Footer() {
       <Divider colorScheme={"blackAlpha"} />
       <Center>
         <Box as="div" my={3}>
-          <Text>Created by Andy Erokhin. All rights reserved © 2023</Text>
+          <Text>{t("created")}</Text>
         </Box>
       </Center>
     </Box>

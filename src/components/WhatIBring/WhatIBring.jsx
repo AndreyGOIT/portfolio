@@ -8,7 +8,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import { useTranslation } from "react-i18next";
+
 const WhatIBring = () => {
+  const { t } = useTranslation();
+
   return (
     <Accordion defaultIndex={[0]} allowMultiple>
       <AccordionItem>
@@ -16,15 +20,14 @@ const WhatIBring = () => {
           <AccordionButton>
             <Box as="span" flex="1" textAlign="left">
               <Text as="b" fontSize="18px" color="white">
-                Diverse Skill Set:
+                {t("Diverse Skill Set")}
               </Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          currently connected and Proficiency in both front-end and back-end
-          technologies, enabling me to develop end-to-end solutions.
+          {t("Text for Diverse Skill Set")}
         </AccordionPanel>
       </AccordionItem>
 
@@ -33,16 +36,13 @@ const WhatIBring = () => {
           <AccordionButton>
             <Box as="span" flex="1" textAlign="left">
               <Text as="b" fontSize="18px" color="white">
-                Team Player:
+                {t("Team Player")}
               </Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel pb={4}>
-          Experienced in collaborative team projects, ensuring smooth
-          communication and effective teamwork.
-        </AccordionPanel>
+        <AccordionPanel pb={4}>{t("Text for Team Player")}</AccordionPanel>
       </AccordionItem>
 
       <AccordionItem>
@@ -50,16 +50,13 @@ const WhatIBring = () => {
           <AccordionButton>
             <Box as="span" flex="1" textAlign="left">
               <Text as="b" fontSize="18px" color="white">
-                Problem Solver:
+                {t("Problem Solver")}
               </Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel pb={4}>
-          Adept at identifying problems and creating elegant solutions, I thrive
-          under challenging situations.
-        </AccordionPanel>
+        <AccordionPanel pb={4}>{t("Text for Problem Solver")}</AccordionPanel>
       </AccordionItem>
 
       <AccordionItem>
@@ -67,16 +64,13 @@ const WhatIBring = () => {
           <AccordionButton>
             <Box as="span" flex="1" textAlign="left">
               <Text as="b" fontSize="18px" color="white">
-                Innovator:
+                {t("Innovator")}
               </Text>
             </Box>
             <AccordionIcon />
           </AccordionButton>
         </h2>
-        <AccordionPanel pb={4}>
-          Always exploring new technologies and methodologies to keep my skills
-          up-to-date and relevant.
-        </AccordionPanel>
+        <AccordionPanel pb={4}>{t("Text for Innovator")}</AccordionPanel>
       </AccordionItem>
     </Accordion>
   );

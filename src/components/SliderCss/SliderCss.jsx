@@ -24,53 +24,55 @@ import { ReactComponent as MyGitHub } from "../../images/github-svgrepo-com.svg"
 import { ReactComponent as MyRestApi } from "../../images/rest-api-icon.svg";
 import { ReactComponent as MyRespDesign } from "../../images/responsive-design-svgrepo-com.svg";
 
-export const items = [
-  {
-    title: "Movies",
-    technologies: ["HTML5", "CSS3", "JavaScript", "React", "RestApi", "GitHub"],
-    text: "The project is a web application designed for searching and exploring information about movies. Users can search for movies by title, view detailed information about specific movies, including descriptions, ratings, cast, and critics' reviews. Additionally, users can bookmark movies and manage their favorites. The application provides a convenient and interactive interface for movie enthusiasts looking for new films or wanting to learn more about their favorite ones.",
-    URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
-    year: "2022",
-    liveLink: "http://andreygoit.github.io/goit-react-hw-05-movies/",
-    link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
-  },
-  {
-    title: "Filmoteka",
-    technologies: [
-      "VSC",
-      "HTML5",
-      "CSS3",
-      "RespDesign",
-      "JavaScript",
-      "React",
-      "RestApi",
-      "GitHub",
-    ],
-    text: "Filmoteka is a sophisticated movie database web application, demonstrating advanced frontend development skills. Crafted with HTML5, CSS3, and JavaScript, it offers an intuitive user interface for movie enthusiasts. The responsive design ensures seamless user experience across devices, showcasing technical proficiency and interactivity.",
-    URL: "https://andreygoit.github.io/Filmoteka-GOIT/",
-    year: "2023",
-    liveLink: "https://andreygoit.github.io/Filmoteka-GOIT",
-    link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
-  },
-  {
-    title: "WebStudio",
-    technologies: ["RespDesign", "HTML5", "CSS3", "VSC", "GitHub"],
-    text: "Explore my WebStudio project, a beautifully crafted website showcasing advanced HTML and CSS skills. With a focus on responsive design, this project demonstrates expertise in creating seamless user experiences across various devices. The website incorporates modern design principles, ensuring both aesthetic appeal and functionality. Dive into the project to witness a blend of creativity and technical proficiency, exemplifying my dedication to delivering visually captivating and user-friendly web solutions.",
-    URL: "https://andreygoit.github.io/goit-markup-hw-08",
-    year: "2022",
-    liveLink: "https://andreygoit.github.io/goit-markup-hw-08",
-    link: "https://github.com/AndreyGOIT/goit-markup-hw-08",
-  },
-  {
-    title: "Phonebook",
-    technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
-    text: "Phonebook is a web application designed for convenient storage and management of contacts. The application allows users to add new contacts with specified names and phone numbers. Contacts can be edited or deleted, and users can perform quick searches for existing contacts. Phonebook provides a simple and effective way to organize personal contact information.",
-    URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
-    year: "2023",
-    liveLink: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
-    link: "https://github.com/AndreyGOIT/goit-react-hw-08-phonebook",
-  },
-];
+import { useTranslation } from "react-i18next";
+
+// export const items = [
+//   {
+//     title: "Movies",
+//     technologies: ["HTML5", "CSS3", "JavaScript", "React", "RestApi", "GitHub"],
+//     text: "The project is a web application designed for searching and exploring information about movies. Users can search for movies by title, view detailed information about specific movies, including descriptions, ratings, cast, and critics' reviews. Additionally, users can bookmark movies and manage their favorites. The application provides a convenient and interactive interface for movie enthusiasts looking for new films or wanting to learn more about their favorite ones.",
+//     URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
+//     year: "2022",
+//     liveLink: "http://andreygoit.github.io/goit-react-hw-05-movies/",
+//     link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
+//   },
+//   {
+//     title: "Filmoteka",
+//     technologies: [
+//       "VSC",
+//       "HTML5",
+//       "CSS3",
+//       "RespDesign",
+//       "JavaScript",
+//       "React",
+//       "RestApi",
+//       "GitHub",
+//     ],
+//     text: "Filmoteka is a sophisticated movie database web application, demonstrating advanced frontend development skills. Crafted with HTML5, CSS3, and JavaScript, it offers an intuitive user interface for movie enthusiasts. The responsive design ensures seamless user experience across devices, showcasing technical proficiency and interactivity.",
+//     URL: "https://andreygoit.github.io/Filmoteka-GOIT/",
+//     year: "2023",
+//     liveLink: "https://andreygoit.github.io/Filmoteka-GOIT",
+//     link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
+//   },
+//   {
+//     title: "WebStudio",
+//     technologies: ["RespDesign", "HTML5", "CSS3", "VSC", "GitHub"],
+//     text: "Explore my WebStudio project, a beautifully crafted website showcasing advanced HTML and CSS skills. With a focus on responsive design, this project demonstrates expertise in creating seamless user experiences across various devices. The website incorporates modern design principles, ensuring both aesthetic appeal and functionality. Dive into the project to witness a blend of creativity and technical proficiency, exemplifying my dedication to delivering visually captivating and user-friendly web solutions.",
+//     URL: "https://andreygoit.github.io/goit-markup-hw-08",
+//     year: "2022",
+//     liveLink: "https://andreygoit.github.io/goit-markup-hw-08",
+//     link: "https://github.com/AndreyGOIT/goit-markup-hw-08",
+//   },
+//   {
+//     title: "Phonebook",
+//     technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
+//     text: "Phonebook is a web application designed for convenient storage and management of contacts. The application allows users to add new contacts with specified names and phone numbers. Contacts can be edited or deleted, and users can perform quick searches for existing contacts. Phonebook provides a simple and effective way to organize personal contact information.",
+//     URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
+//     year: "2023",
+//     liveLink: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
+//     link: "https://github.com/AndreyGOIT/goit-react-hw-08-phonebook",
+//   },
+// ];
 
 const TechnologiesIcons = {
   VSC: MyVSCode,
@@ -83,8 +85,66 @@ const TechnologiesIcons = {
   RespDesign: MyRespDesign,
 };
 
-export const SliderCss = ({ items }) => {
+export const SliderCss = () => {
+  const { t } = useTranslation();
+
+  const items = [
+    {
+      title: "Movies",
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "RestApi",
+        "GitHub",
+      ],
+      text: t("Text for Slider About Movies"),
+      URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
+      year: "2022",
+      liveLink: "http://andreygoit.github.io/goit-react-hw-05-movies/",
+      link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
+    },
+    {
+      title: "Filmoteka",
+      technologies: [
+        "VSC",
+        "HTML5",
+        "CSS3",
+        "RespDesign",
+        "JavaScript",
+        "React",
+        "RestApi",
+        "GitHub",
+      ],
+      text: t("Text for Slider About Filmoteka"),
+      URL: "https://andreygoit.github.io/Filmoteka-GOIT/",
+      year: "2023",
+      liveLink: "https://andreygoit.github.io/Filmoteka-GOIT",
+      link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
+    },
+    {
+      title: "WebStudio",
+      technologies: ["RespDesign", "HTML5", "CSS3", "VSC", "GitHub"],
+      text: t("Text for Slider About WebStudio"),
+      URL: "https://andreygoit.github.io/goit-markup-hw-08",
+      year: "2022",
+      liveLink: "https://andreygoit.github.io/goit-markup-hw-08",
+      link: "https://github.com/AndreyGOIT/goit-markup-hw-08",
+    },
+    {
+      title: "Phonebook",
+      technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
+      text: t("Text for Slider About Phonebook"),
+      URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
+      year: "2023",
+      liveLink: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
+      link: "https://github.com/AndreyGOIT/goit-react-hw-08-phonebook",
+    },
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
+
   const totalItems = items.length;
 
   const handlePrev = () => {
@@ -119,7 +179,7 @@ export const SliderCss = ({ items }) => {
         flexDirection={"column"}
         w={{
           base: "100%",
-          mobMax: "480px",
+          // mobMax: "480px",
           tab: "768px",
           tabMax: "960px",
           desk: "1280px",
@@ -179,7 +239,7 @@ export const SliderCss = ({ items }) => {
             >
               <Text
                 as={"h3"}
-                fontSize={{ base: "30px", md: "34px", lg: "38px" }}
+                fontSize={{ base: "27px", md: "34px", lg: "38px" }}
                 lineHeight={"1.3"}
                 fontWeight={"700"}
                 color={"black"}
@@ -199,7 +259,7 @@ export const SliderCss = ({ items }) => {
                 fontSize={{ base: "sm", md: "md", lg: "lg" }}
                 color={"white"}
               >
-                Technologies:
+                {t("Slider Technologies")}
               </Text>{" "}
               {currentItem.technologies.map((tech, idx) => (
                 <Box key={idx} className="techBox">
@@ -230,7 +290,7 @@ export const SliderCss = ({ items }) => {
               fontSize={{ base: "12px", tab: "14px", desk: "16px" }}
               color="white"
             >
-              <b>About: </b>
+              <b style={{ fontSize: "1.15em" }}>{t("Slider About")}</b>
               {currentItem.text}
             </Text>
 
@@ -240,7 +300,7 @@ export const SliderCss = ({ items }) => {
               fontSize={{ base: "sm", md: "md", lg: "lg" }}
               color="white"
             >
-              <b>Year: </b>
+              <b>{t("Slider Year")}</b>
               {currentItem.year}
             </Text>
 
@@ -251,16 +311,16 @@ export const SliderCss = ({ items }) => {
                 fontSize={{ base: "sm", md: "md", lg: "lg" }}
                 color="white"
               >
-                <b>Links: </b>
+                <b>{t("Slider Links")}</b>
               </Text>
               <Link as="a" isExternal href={currentItem.liveLink} color="white">
-                live <ExternalLinkIcon mx="2px" />
+                live <ExternalLinkIcon boxSize={3.5} mx="2px" />
               </Link>
               <Text as="p" fontSize="lg" color="white">
                 |
               </Text>
               <Link as="a" isExternal href={currentItem.link} color="white">
-                github <ExternalLinkIcon mx="2px" />
+                github <ExternalLinkIcon boxSize={3.5} mx="2px" />
               </Link>
             </Flex>
           </div>

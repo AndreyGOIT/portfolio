@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import HardSkills from "../components/HardSkills";
 import SoftSkills from "../components/SoftSkills";
-import { items, SliderCss } from "../components/SliderCss";
+import { SliderCss } from "../components/SliderCss";
 import NextGoals from "../components/NextGoals";
 
 const Main = () => {
@@ -10,7 +10,7 @@ const Main = () => {
       <Hero />
       <HardSkills />
       <SoftSkills />
-      <SliderCss items={items} />
+      <SliderCss />
       <NextGoals />
     </>
   );
