@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9e278a2d.css",
+    "main.js": "/static/js/main.3d397831.js",
+    "static/media/mongodb-svgrepo-com.svg": "/static/media/mongodb-svgrepo-com.e697a82acbbc6ae98ee56e991ffc7ead.svg",
+    "static/media/react-native-1.svg": "/static/media/react-native-1.55360266b3781dae00a5a77c8916f82d.svg",
+    "static/media/nodejs-1-logo-svgrepo-com.svg": "/static/media/nodejs-1-logo-svgrepo-com.543dd86690e645fec32c4c62669bf07f.svg",
+    "static/media/responsive-design-svgrepo-com.svg": "/static/media/responsive-design-svgrepo-com.385790e6b26f83f1602a68e4d15bf69f.svg",
+    "static/media/rest-api-icon.svg": "/static/media/rest-api-icon.aa47f200603ee12f44bdc711d4c255b8.svg",
+    "static/media/react-svgrepo-com.svg": "/static/media/react-svgrepo-com.71e74256161bb2fbb05b8c62338a0b5d.svg",
+    "static/media/next-js-svgrepo-com.svg": "/static/media/next-js-svgrepo-com.f4561910a58625e7c97f39408a6c4787.svg",
+    "static/media/linkedin-outline-svgrepo-com.svg": "/static/media/linkedin-outline-svgrepo-com.90e567ab75d0a38714e631522af27651.svg",
+    "static/media/redux-svgrepo-com.svg": "/static/media/redux-svgrepo-com.594d440662cb5cf59fac0f6a80b311ef.svg",
+    "static/media/vs-code-svgrepo-com.svg": "/static/media/vs-code-svgrepo-com.13fc81aabc54712d702ca9d85bbfc254.svg",
+    "static/media/openai-svgrepo-com.svg": "/static/media/openai-svgrepo-com.22ffb94608eef366d6f596147723782e.svg",
+    "static/media/wordpress-color-svgrepo-com.svg": "/static/media/wordpress-color-svgrepo-com.7e4d3ee9dd621f7e5b56ba02a0e447de.svg",
+    "static/media/typescript-svgrepo-com.svg": "/static/media/typescript-svgrepo-com.98c8acdb3d46261d8b6fabfedc4a2dd2.svg",
+    "static/media/github-142-svgrepo-com.svg": "/static/media/github-142-svgrepo-com.038e330479eee14875a40ba841f98598.svg",
+    "static/media/js-svgrepo-com.svg": "/static/media/js-svgrepo-com.212007e34e9a095f6bf9d999ef59dfce.svg",
+    "static/media/github-svgrepo-com.svg": "/static/media/github-svgrepo-com.df2b97233535e7716e3f8cb896047321.svg",
+    "static/media/mail-alt-3-svgrepo-com.svg": "/static/media/mail-alt-3-svgrepo-com.feec0eb5ad57b8ac2441a1e5c3736076.svg",
+    "index.html": "/index.html",
+    "static/media/markdown-svgrepo-com-2.svg": "/static/media/markdown-svgrepo-com-2.9a64b4e7aab94c2daff466e85ac9e440.svg",
+    "static/media/docker-svgrepo-com.svg": "/static/media/docker-svgrepo-com.b7f65eb9bec742c48b679cf8738ab519.svg",
+    "static/media/angular-svgrepo-com.svg": "/static/media/angular-svgrepo-com.c6de5f035f32953671bad506cf6b4c2b.svg",
+    "static/media/css-3-svgrepo-com.svg": "/static/media/css-3-svgrepo-com.bfbbdd2a11a415e26b97018ae322cd04.svg",
+    "static/media/html-5-svgrepo-com.svg": "/static/media/html-5-svgrepo-com.f58c74b954fe6bc10f90d69034fd9527.svg",
+    "static/media/vue-svgrepo-com.svg": "/static/media/vue-svgrepo-com.720414da40e68b5e4c07cf1be12abf72.svg",
+    "main.9e278a2d.css.map": "/static/css/main.9e278a2d.css.map",
+    "main.3d397831.js.map": "/static/js/main.3d397831.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e278a2d.css",
+    "static/js/main.3d397831.js"
+  ]
+}

@@ -1,0 +1,2 @@
+.slider{display:flex;position:relative;width:100%}.slide{flex:0 0 100%;gap:20px;opacity:0;padding:20px;transition:opacity .5s ease}.slide.active{display:flex;opacity:1}.slideContent{display:flex;flex-direction:column;gap:10px;width:50%}.slideFrame{background-color:#fff;border:1px solid #000}.techBox{align-items:center;display:flex;flex-direction:column}.slideLinks{display:flex;gap:5px}
+/*# sourceMappingURL=main.9e278a2d.css.map*/
