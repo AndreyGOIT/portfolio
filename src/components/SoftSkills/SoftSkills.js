@@ -14,18 +14,25 @@ import {
 import { MdCheckCircle } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
+// SoftSkills Component
 const SoftSkills = () => {
-  const { colorMode } = useColorMode(); // Получаем текущий режим цветов
+  // Get current color mode
+  const { colorMode } = useColorMode();
+  // Get translation function
   const { t } = useTranslation();
 
   return (
+    // Outer container for soft skills section
     <Box
       bg={colorMode === "light" ? "gray.200" : "gray.800"}
       position={"relative"}
     >
+      {/* Container for soft skills content */}
       <Container as="section" maxW={"7xl"} p="40px">
         <Center>
+          {/* Centered content */}
           <Flex flexDirection={"column"} gap={4}>
+            {/* Heading */}
             <Heading
               textAlign="center"
               my="30px"
@@ -37,16 +44,21 @@ const SoftSkills = () => {
               borderRadius={6}
               fontSize={{ base: "2xl", lg: "3xl" }}
             >
+              {/* Translation for "Soft Skills" */}
               {t("Soft Skills")}
             </Heading>
+            {/* List of soft skills */}
             <List spacing={3}>
+              {/* Individual soft skill with its description */}
               <ListItem>
                 <ListIcon as={MdCheckCircle} boxSize={6} color="green.500" />
+                {/* Translation for "Attention to Detail" */}
                 <Text as="b" fontSize="xl">
                   {" "}
                   {t("Attention to Detail")}{" "}
                 </Text>
                 <br />
+                {/* Translation for the description of "Attention to Detail" */}
                 <Text as="p" fontSize="xl">
                   {t("Text for Attention to Detail")}
                 </Text>

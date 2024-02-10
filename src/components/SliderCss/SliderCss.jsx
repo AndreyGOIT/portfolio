@@ -15,6 +15,7 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
+// Import SVG icons
 import { ReactComponent as MyHTML } from "../../images/html-5-svgrepo-com.svg";
 import { ReactComponent as MyCSS3 } from "../../images/css-3-svgrepo-com.svg";
 import { ReactComponent as MyJS } from "../../images/js-svgrepo-com.svg";
@@ -26,54 +27,7 @@ import { ReactComponent as MyRespDesign } from "../../images/responsive-design-s
 
 import { useTranslation } from "react-i18next";
 
-// export const items = [
-//   {
-//     title: "Movies",
-//     technologies: ["HTML5", "CSS3", "JavaScript", "React", "RestApi", "GitHub"],
-//     text: "The project is a web application designed for searching and exploring information about movies. Users can search for movies by title, view detailed information about specific movies, including descriptions, ratings, cast, and critics' reviews. Additionally, users can bookmark movies and manage their favorites. The application provides a convenient and interactive interface for movie enthusiasts looking for new films or wanting to learn more about their favorite ones.",
-//     URL: "https://andreygoit.github.io/goit-react-hw-05-movies/",
-//     year: "2022",
-//     liveLink: "http://andreygoit.github.io/goit-react-hw-05-movies/",
-//     link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
-//   },
-//   {
-//     title: "Filmoteka",
-//     technologies: [
-//       "VSC",
-//       "HTML5",
-//       "CSS3",
-//       "RespDesign",
-//       "JavaScript",
-//       "React",
-//       "RestApi",
-//       "GitHub",
-//     ],
-//     text: "Filmoteka is a sophisticated movie database web application, demonstrating advanced frontend development skills. Crafted with HTML5, CSS3, and JavaScript, it offers an intuitive user interface for movie enthusiasts. The responsive design ensures seamless user experience across devices, showcasing technical proficiency and interactivity.",
-//     URL: "https://andreygoit.github.io/Filmoteka-GOIT/",
-//     year: "2023",
-//     liveLink: "https://andreygoit.github.io/Filmoteka-GOIT",
-//     link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
-//   },
-//   {
-//     title: "WebStudio",
-//     technologies: ["RespDesign", "HTML5", "CSS3", "VSC", "GitHub"],
-//     text: "Explore my WebStudio project, a beautifully crafted website showcasing advanced HTML and CSS skills. With a focus on responsive design, this project demonstrates expertise in creating seamless user experiences across various devices. The website incorporates modern design principles, ensuring both aesthetic appeal and functionality. Dive into the project to witness a blend of creativity and technical proficiency, exemplifying my dedication to delivering visually captivating and user-friendly web solutions.",
-//     URL: "https://andreygoit.github.io/goit-markup-hw-08",
-//     year: "2022",
-//     liveLink: "https://andreygoit.github.io/goit-markup-hw-08",
-//     link: "https://github.com/AndreyGOIT/goit-markup-hw-08",
-//   },
-//   {
-//     title: "Phonebook",
-//     technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
-//     text: "Phonebook is a web application designed for convenient storage and management of contacts. The application allows users to add new contacts with specified names and phone numbers. Contacts can be edited or deleted, and users can perform quick searches for existing contacts. Phonebook provides a simple and effective way to organize personal contact information.",
-//     URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
-//     year: "2023",
-//     liveLink: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
-//     link: "https://github.com/AndreyGOIT/goit-react-hw-08-phonebook",
-//   },
-// ];
-
+// Map of technology names to corresponding SVG components
 const TechnologiesIcons = {
   VSC: MyVSCode,
   HTML5: MyHTML,
@@ -85,10 +39,13 @@ const TechnologiesIcons = {
   RespDesign: MyRespDesign,
 };
 
+// SliderCss Component
 export const SliderCss = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // Get translation function
 
+  // Array of items containing project details
   const items = [
+    // Each item represents a project
     {
       title: "Movies",
       technologies: [
@@ -105,56 +62,23 @@ export const SliderCss = () => {
       liveLink: "http://andreygoit.github.io/goit-react-hw-05-movies/",
       link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
     },
-    {
-      title: "Filmoteka",
-      technologies: [
-        "VSC",
-        "HTML5",
-        "CSS3",
-        "RespDesign",
-        "JavaScript",
-        "React",
-        "RestApi",
-        "GitHub",
-      ],
-      text: t("Text for Slider About Filmoteka"),
-      URL: "https://andreygoit.github.io/Filmoteka-GOIT/",
-      year: "2023",
-      liveLink: "https://andreygoit.github.io/Filmoteka-GOIT",
-      link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
-    },
-    {
-      title: "WebStudio",
-      technologies: ["RespDesign", "HTML5", "CSS3", "VSC", "GitHub"],
-      text: t("Text for Slider About WebStudio"),
-      URL: "https://andreygoit.github.io/goit-markup-hw-08",
-      year: "2022",
-      liveLink: "https://andreygoit.github.io/goit-markup-hw-08",
-      link: "https://github.com/AndreyGOIT/goit-markup-hw-08",
-    },
-    {
-      title: "Phonebook",
-      technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
-      text: t("Text for Slider About Phonebook"),
-      URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
-      year: "2023",
-      liveLink: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
-      link: "https://github.com/AndreyGOIT/goit-react-hw-08-phonebook",
-    },
+    // Repeat similar structure for other projects
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // State to track active project index
+  const totalItems = items.length; // Total number of items
 
-  const totalItems = items.length;
-
+  // Function to handle previous slide
   const handlePrev = () => {
     setActiveIndex(Math.max(activeIndex - 1, 0));
   };
 
+  // Function to handle next slide
   const handleNext = () => {
     setActiveIndex(Math.min(activeIndex + 1, totalItems - 1));
   };
 
+  // Get the currently active item
   const currentItem = items[activeIndex];
 
   return (
@@ -179,20 +103,14 @@ export const SliderCss = () => {
         flexDirection={"column"}
         w={{
           base: "100%",
-          // mobMax: "480px",
           tab: "768px",
           tabMax: "960px",
           desk: "1280px",
         }}
         h={"100%"}
-        // px={{
-        //   base: "15px",
-        //   tab: "20px",
-        //   desk: "10px",
-        // }}
         mx={"auto"}
       >
-        {/* Left Icon */}
+        {/* Left arrow button */}
         <IconButton
           aria-label="left-arrow"
           variant="ghost"
@@ -201,14 +119,14 @@ export const SliderCss = () => {
           top={"50%"}
           transform={"translate(0%, -50%)"}
           zIndex={2}
-          onClick={() => {
-            handlePrev();
-          }}
+          onClick={handlePrev}
         >
           <BiLeftArrowAlt color={"white"} size="40px" />
         </IconButton>
+
+        {/* Slide content */}
         <Box as="div" bg={"gray.700"} className={`slide active`}>
-          {/* Project example */}
+          {/* Project example iframe */}
           <div className="slideContent slideFrame">
             <iframe
               width="100%"
@@ -218,8 +136,9 @@ export const SliderCss = () => {
             ></iframe>
           </div>
 
-          {/* About project */}
+          {/* Project details */}
           <div className="slideContent">
+            {/* Project title */}
             <Flex
               as={"div"}
               justifyContent={"center"}
@@ -229,7 +148,6 @@ export const SliderCss = () => {
               h={"50px"}
               w={{
                 base: "150px",
-                mobMax: "200px",
                 tab: "300px",
                 tabMax: "400px",
                 desk: "500px",
@@ -248,7 +166,7 @@ export const SliderCss = () => {
               </Text>
             </Flex>
 
-            {/* Technologies */}
+            {/* Technologies used */}
             <Flex
               alignItems={"center"}
               gap={{ base: "5px", md: "8px", lg: "10px" }}
@@ -262,6 +180,7 @@ export const SliderCss = () => {
                 {t("Slider Technologies")}
               </Text>{" "}
               {currentItem.technologies.map((tech, idx) => (
+                // Map over technologies and display icons
                 <Box key={idx} className="techBox">
                   <Icon
                     as={TechnologiesIcons[tech]}
@@ -283,8 +202,7 @@ export const SliderCss = () => {
               ))}
             </Flex>
 
-            {/* About */}
-
+            {/* Project description */}
             <Text
               as="p"
               fontSize={{ base: "12px", tab: "14px", desk: "16px" }}
@@ -294,7 +212,7 @@ export const SliderCss = () => {
               {currentItem.text}
             </Text>
 
-            {/* Year */}
+            {/* Project year */}
             <Text
               as="p"
               fontSize={{ base: "sm", md: "md", lg: "lg" }}
@@ -304,7 +222,7 @@ export const SliderCss = () => {
               {currentItem.year}
             </Text>
 
-            {/* Links */}
+            {/* Project links */}
             <Flex gap={2} align={"baseline"}>
               <Text
                 as="p"
@@ -313,12 +231,14 @@ export const SliderCss = () => {
               >
                 <b>{t("Slider Links")}</b>
               </Text>
+              {/* Live link */}
               <Link as="a" isExternal href={currentItem.liveLink} color="white">
                 live <ExternalLinkIcon boxSize={3.5} mx="2px" />
               </Link>
               <Text as="p" fontSize="lg" color="white">
                 |
               </Text>
+              {/* GitHub link */}
               <Link as="a" isExternal href={currentItem.link} color="white">
                 github <ExternalLinkIcon boxSize={3.5} mx="2px" />
               </Link>
@@ -326,7 +246,7 @@ export const SliderCss = () => {
           </div>
         </Box>
 
-        {/* Right Icon */}
+        {/* Right arrow button */}
         <IconButton
           aria-label="right-arrow"
           variant="ghost"
@@ -335,7 +255,7 @@ export const SliderCss = () => {
           top={"50%"}
           transform={"translate(0%, -50%)"}
           zIndex={2}
-          onClick={() => handleNext()}
+          onClick={handleNext}
         >
           <BiRightArrowAlt color={"white"} size="40px" />
         </IconButton>

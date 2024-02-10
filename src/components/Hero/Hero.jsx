@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import {
   Container,
@@ -9,20 +9,23 @@ import {
   SimpleGrid,
   Image,
   useColorMode,
-} from "@chakra-ui/react";
-import WhatIBring from "../WhatIBring";
-import { useTranslation } from "react-i18next";
+} from "@chakra-ui/react"; // Import necessary components from Chakra UI library
+import WhatIBring from "../WhatIBring"; // Import WhatIBring component
+import { useTranslation } from "react-i18next"; // Import useTranslation hook for translation
 
+// Component to render stats text with specific styling
 const StatsText = ({ children }) => (
   <Text as={"p"} fontWeight={700} color={"white"}>
     {children}
   </Text>
 );
 
+// Hero component
 export default function Hero() {
-  const { colorMode } = useColorMode();
-  const { t } = useTranslation();
+  const { colorMode } = useColorMode(); // Use color mode from Chakra UI
+  const { t } = useTranslation(); // Use translation hook to access translations
 
+  // Array of stats data with translated titles and content
   const stats = [
     {
       title: t("Professional Journey"),
@@ -55,7 +58,7 @@ export default function Hero() {
       title: t("What I Bring"),
       content: (
         <>
-          <WhatIBring />
+          <WhatIBring /> {/* Render WhatIBring component */}
         </>
       ),
     },
@@ -73,6 +76,7 @@ export default function Hero() {
           direction={{ base: "column", md: "row" }}
           justify={{ lg: "center" }}
         >
+          {/* Left side with image */}
           <Box mb={{ base: 8, md: 0 }} mr={{ md: 10 }} flex="1">
             <Box
               w={{ base: "100%", md: "400px" }}
@@ -87,8 +91,10 @@ export default function Hero() {
               />
             </Box>
           </Box>
+          {/* Right side with text */}
           <Box flex="1">
             <Flex direction="column" gap={6}>
+              {/* Title */}
               <Flex
                 direction={{ base: "row", md: "column", lg: "row" }}
                 gap={1}
@@ -111,14 +117,14 @@ export default function Hero() {
                   {t("heroTitle2")}
                 </Heading>
               </Flex>
-
+              {/* Text */}
               <Text fontSize={["xl", "xl", "2xl"]} color={"white"}>
                 {t("heroText")}
               </Text>
             </Flex>
           </Box>
         </Flex>
-
+        {/* Stats section */}
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           {stats.map((stat) => (
             <Box key={stat.title}>
@@ -129,10 +135,10 @@ export default function Hero() {
                 color={"white"}
                 mb={3}
               >
-                {stat.title}
+                {stat.title} {/* Render stat title */}
               </Text>
               <Text as={"h3"} fontSize={"xl"} color={"white"}>
-                {stat.content}
+                {stat.content} {/* Render stat content */}
               </Text>
             </Box>
           ))}

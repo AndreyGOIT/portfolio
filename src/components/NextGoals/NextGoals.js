@@ -8,10 +8,11 @@ import {
   Center,
 } from "@chakra-ui/react";
 
+// Importing SVG icons
 import { ReactComponent as MyAngular } from "../../images/angular-svgrepo-com.svg";
 import { ReactComponent as MyDocker } from "../../images/docker-svgrepo-com.svg";
-import { ReactComponent as MyNext } from "../../images/next-js-svgrepo-com.svg";
-import { ReactComponent as MyTypeScript } from "../../images/typescript-svgrepo-com.svg";
+// import { ReactComponent as MyNext } from "../../images/next-js-svgrepo-com.svg";
+// import { ReactComponent as MyTypeScript } from "../../images/typescript-svgrepo-com.svg";
 import { ReactComponent as MyVue } from "../../images/vue-svgrepo-com.svg";
 import { ReactComponent as MyWordPress } from "../../images/wordpress-color-svgrepo-com.svg";
 import { ReactComponent as MyReactNative } from "../../images/react-native-1.svg";
@@ -19,11 +20,13 @@ import { ReactComponent as MyMarkdown } from "../../images/markdown-svgrepo-com-
 
 import { useTranslation } from "react-i18next";
 
+// NextGoals Component
 const NextGoals = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // Get translation function
 
   return (
     <Box position={"relative"}>
+      {/* Container for Next Goals section */}
       <Container as="section" maxW={"7xl"} p="40px">
         <Center>
           <Flex
@@ -33,6 +36,7 @@ const NextGoals = () => {
             justify="center"
             textAlign="center"
           >
+            {/* Heading for Next Goals section */}
             <Heading
               textAlign="center"
               my="30px"
@@ -44,14 +48,16 @@ const NextGoals = () => {
               borderRadius={6}
               fontSize={{ base: "2xl", lg: "3xl" }}
             >
-              {t("NextGoals")}
+              {t("NextGoals")} {/* Translation for "NextGoals" */}
             </Heading>
+            {/* Flex container for icons */}
             <Flex
               gap={6}
               flexWrap="wrap" // Этот атрибут позволяет иконкам переноситься на новую строку при нехватке места в текущей строке
               justify="center"
               textAlign="center"
             >
+              {/* Individual boxes for each icon */}
               <Box w={{ base: "80px", md: "90px" }}>
                 <Center>
                   <Text as="b">Angular</Text>
@@ -66,7 +72,7 @@ const NextGoals = () => {
                 <Icon as={MyDocker} w={20} h={20} />
               </Box>
 
-              <Box w={{ base: "80px", md: "90px" }}>
+              {/* <Box w={{ base: "80px", md: "90px" }}>
                 <Center>
                   <Text as="b">Next JS</Text>
                 </Center>
@@ -78,7 +84,7 @@ const NextGoals = () => {
                   <Text as="b">TypeScript</Text>
                 </Center>
                 <Icon as={MyTypeScript} w={20} h={20} />
-              </Box>
+              </Box> */}
 
               <Box w={{ base: "80px", md: "90px" }}>
                 <Center>
@@ -103,9 +109,9 @@ const NextGoals = () => {
 
               <Box w={{ base: "80px", md: "90px" }}>
                 <Center>
-                  <Text as="b">Markdown</Text>
+                  <Text as="b">Markdown</Text> {/* Text for Markdown */}
                 </Center>
-                <Icon as={MyMarkdown} w={20} h={20} />
+                <Icon as={MyMarkdown} w={20} h={20} /> {/* Markdown icon */}
               </Box>
             </Flex>
           </Flex>
