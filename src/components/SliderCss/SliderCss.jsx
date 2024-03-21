@@ -47,6 +47,33 @@ export const SliderCss = () => {
   const items = [
     // Each item represents a project
     {
+      title: "Filmoteka",
+      technologies: ["HTML5", "CSS3", "JavaScript", "React"],
+      text: t("Text for Slider About Filmoteka"),
+      URL: "https://andreygoit.github.io/Filmoteka-GOIT/index.html",
+      year: "2023",
+      liveLink: "https://andreygoit.github.io/Filmoteka-GOIT/index.html",
+      link: "https://github.com/AndreyGOIT/Filmoteka-GOIT",
+    },
+    {
+      title: "WebStudio",
+      technologies: ["HTML5", "CSS3", "JavaScript", "React"],
+      text: t("Text for Slider About WebStudio"),
+      URL: "https://andreygoit.github.io/goit-markup-hw-08/",
+      year: "2022",
+      liveLink: "https://andreygoit.github.io/goit-markup-hw-08/",
+      link: "https://github.com/AndreyGOIT/goit-markup-hw-08",
+    },
+    {
+      title: "Phonebook",
+      technologies: ["VSC", "HTML5", "CSS3", "JavaScript", "React", "GitHub"],
+      text: t("Text for Slider About Phonebook"),
+      URL: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
+      year: "2022",
+      liveLink: "https://andreygoit.github.io/goit-react-hw-08-phonebook",
+      link: "https://github.com/AndreyGOIT/goit-react-hw-08-phonebook",
+    },
+    {
       title: "Movies",
       technologies: [
         "HTML5",
@@ -61,7 +88,7 @@ export const SliderCss = () => {
       year: "2022",
       liveLink: "http://andreygoit.github.io/goit-react-hw-05-movies/",
       link: "https://github.com/AndreyGOIT/goit-react-hw-05-movies",
-    },
+    }
     // Repeat similar structure for other projects
   ];
 
@@ -70,12 +97,14 @@ export const SliderCss = () => {
 
   // Function to handle previous slide
   const handlePrev = () => {
-    setActiveIndex(Math.max(activeIndex - 1, 0));
+    // setActiveIndex(Math.max(activeIndex - 1, 0));
+    setActiveIndex(prevIndex => Math.max(prevIndex - 1, 0));
   };
 
   // Function to handle next slide
   const handleNext = () => {
-    setActiveIndex(Math.min(activeIndex + 1, totalItems - 1));
+    // setActiveIndex(Math.min(activeIndex + 1, totalItems - 1));
+    setActiveIndex(prevIndex => Math.min(prevIndex + 1, totalItems - 1));
   };
 
   // Get the currently active item
