@@ -59,7 +59,7 @@ const Header = () => {
             <Box as="a" href="https://github.com/AndreyGOIT">
               <Icon as={MyGit} w={7} h={7} fill={iconColor[colorMode]} />
             </Box>
-            <Box as="a" href="https://www.linkedin.com/in/andrey-erokhin">
+            <Box as="a" href="https://www.linkedin.com/in/andyerokhin">
               <Icon as={MyLinkedIn} w={7} h={7} fill={iconColor[colorMode]} />
             </Box>
           </Flex>

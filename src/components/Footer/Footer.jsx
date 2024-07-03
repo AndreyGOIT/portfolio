@@ -73,7 +73,7 @@ export default function Footer() {
               <Box as="a" href="https://github.com/AndreyGOIT">
                 <MyGit width={30} height={30} fill={iconColor[colorMode]} />
               </Box>
-              <Box as="a" href="https://www.linkedin.com/in/andrey-erokhin">
+              <Box as="a" href="https://www.linkedin.com/in/andyerokhin">
                 <MyLinkedIn
                   width={30}
                   height={30}
